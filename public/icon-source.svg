@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background circle -->
+  <rect width="512" height="512" rx="108" fill="#E85D4A"/>
+  <!-- Coin/money symbol -->
+  <circle cx="256" cy="240" r="120" fill="#FDF6F0" opacity="0.95"/>
+  <circle cx="256" cy="240" r="95" fill="none" stroke="#E85D4A" stroke-width="6" opacity="0.3"/>
+  <!-- Dollar/Rupee stylized symbol -->
+  <text x="256" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="120" fill="#E85D4A">₹</text>
+  <!-- Context dots at bottom -->
+  <circle cx="200" cy="400" r="20" fill="#FDF6F0" opacity="0.9"/>
+  <circle cx="256" cy="400" r="20" fill="#FDF6F0" opacity="0.7"/>
+  <circle cx="312" cy="400" r="20" fill="#FDF6F0" opacity="0.5"/>
+  <!-- App name hint line -->
+  <rect x="180" y="440" width="152" height="4" rx="2" fill="#FDF6F0" opacity="0.4"/>
+</svg>

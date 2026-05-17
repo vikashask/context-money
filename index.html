@@ -2,13 +2,57 @@
 <html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
+    <title>ContextMoney — Track Expenses Across Life Phases</title>
+    <meta name="description" content="Free, private expense tracker that organizes spending by life contexts — college, job, city. No signup, no servers. Works offline as a PWA." />
+    <link rel="canonical" href="https://contextmoney.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://contextmoney.vercel.app/" />
+    <meta property="og:title" content="ContextMoney — Track Expenses Across Life Phases" />
+    <meta property="og:description" content="Free, private expense tracker that organizes spending by life contexts. No signup, no servers, 100% offline." />
+    <meta property="og:image" content="https://contextmoney.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="ContextMoney" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ContextMoney — Track Expenses Across Life Phases" />
+    <meta name="twitter:description" content="Free, private expense tracker. No signup, no servers, 100% offline PWA." />
+    <meta name="twitter:image" content="https://contextmoney.vercel.app/og-image.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ContextMoney",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Privacy-first offline expense tracker that organizes spending by life contexts.",
+      "url": "https://contextmoney.vercel.app/",
+      "screenshot": "https://contextmoney.vercel.app/og-image.png",
+      "featureList": "Expense tracking, Budget management, Multi-context, Analytics, PWA offline support"
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#E85D4A" />
+    <!-- iOS PWA meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ContextMoney" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>ContextMoney</title>
   </head>
   <body>
     <div id="root"></div>
