@@ -131,14 +131,14 @@ export default function QuickAdd({ onAdded }) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={`"500 chai", "200 auto yesterday", "500 food, 200 auto"`}
-            className="w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border text-navy dark:text-dark-text placeholder-gray-400 dark:placeholder-dark-muted focus:outline-none focus:ring-2 focus:ring-coral/40 focus:border-coral text-sm md:text-base"
+            className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/60 dark:border-dark-border text-navy dark:text-dark-text placeholder-gray-400 dark:placeholder-dark-muted focus:outline-none focus:ring-2 focus:ring-coral/40 focus:border-coral text-sm md:text-base shadow-sm transition-shadow focus:shadow-md"
             autoComplete="off"
             aria-label="Quick add expense"
           />
         </div>
         <button
           type="submit"
-          className="px-5 py-3 bg-coral hover:bg-coral-light text-white rounded-xl font-medium text-sm transition-colors active:scale-95 min-w-[44px]"
+          className="px-5 py-3.5 bg-gradient-to-r from-coral to-[#f7a072] hover:from-coral-light hover:to-[#f9b088] text-white rounded-xl font-semibold text-sm transition-all active:scale-95 min-w-[44px] shadow-md shadow-coral/20"
           aria-label="Add expense"
         >
           Add
@@ -146,8 +146,8 @@ export default function QuickAdd({ onAdded }) {
       </form>
 
       {showCategoryPicker && categories && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl shadow-lg p-3 z-30 animate-fade-in-up">
-          <p className="text-xs text-gray-500 dark:text-dark-muted mb-2">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-dark-card/95 backdrop-blur-lg border border-gray-200/60 dark:border-dark-border rounded-xl shadow-xl p-3 z-30 animate-scale-in">
+          <p className="text-xs text-gray-500 dark:text-dark-muted mb-2 font-medium">
             Select a category:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -155,10 +155,10 @@ export default function QuickAdd({ onAdded }) {
               <button
                 key={cat.id}
                 onClick={() => selectCategory(cat.name)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-gray-200 dark:border-dark-border hover:bg-gray-100 dark:hover:bg-dark-border transition-colors"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm border border-gray-200/60 dark:border-dark-border hover:bg-coral/5 hover:border-coral/30 dark:hover:bg-dark-border transition-all"
               >
                 <span>{cat.icon}</span>
-                <span className="text-navy dark:text-dark-text">
+                <span className="text-navy dark:text-dark-text font-medium">
                   {cat.name}
                 </span>
               </button>

@@ -19,6 +19,7 @@ import { useStore } from "./store";
 const Analytics = lazy(() => import("./pages/Analytics"));
 const Compare = lazy(() => import("./pages/Compare"));
 const Expenses = lazy(() => import("./pages/Expenses"));
+const Goals = lazy(() => import("./pages/Goals"));
 const Landing = lazy(() => import("./pages/Landing"));
 const Onboarding = lazy(() => import("./pages/Onboarding"));
 const Recurring = lazy(() => import("./pages/Recurring"));
@@ -146,6 +147,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/expenses" element={<Expenses />} />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/goals" element={<Goals />} />
         <Route path="/compare" element={<Compare />} />
         <Route path="/simulator" element={<Simulator />} />
         <Route path="/recurring" element={<Recurring />} />

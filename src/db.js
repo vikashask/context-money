@@ -26,6 +26,15 @@ db.version(2)
       });
   });
 
+// v3: add goals table for financial goals tracking
+db.version(3).stores({
+  contexts: "++id, name, isArchived",
+  expenses: "++id, contextId, category, date, createdAt, *tags",
+  categories: "++id, name",
+  recurringExpenses: "++id, contextId, category, nextDueDate, isActive",
+  goals: "++id, contextId, name, createdAt",
+});
+
 export const DEFAULT_CATEGORIES = [
   {
     name: "Food",

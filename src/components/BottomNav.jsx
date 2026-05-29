@@ -9,9 +9,10 @@ const tabs = [
 ];
 
 const moreTabs = [
+  { path: "/goals", label: "Goals", icon: "🎯" },
   { path: "/recurring", label: "Recurring", icon: "🔁" },
   { path: "/compare", label: "Compare", icon: "🔄" },
-  { path: "/simulator", label: "Simulator", icon: "🎯" },
+  { path: "/simulator", label: "Simulator", icon: "🧮" },
   { path: "/settings", label: "Settings", icon: "⚙️" },
 ];
 
@@ -70,7 +71,7 @@ export default function BottomNav() {
       )}
 
       <nav
-        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/90 dark:bg-dark-card/90 backdrop-blur-md border-t border-gray-200 dark:border-dark-border safe-area-bottom"
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/80 dark:bg-dark-card/80 backdrop-blur-xl border-t border-gray-200/50 dark:border-dark-border/50 safe-area-bottom shadow-lg shadow-black/[0.03]"
         role="navigation"
         aria-label="Main navigation"
       >
@@ -97,7 +98,7 @@ export default function BottomNav() {
           <div className="relative -mt-6">
             <button
               onClick={handleFabClick}
-              className="w-14 h-14 bg-coral hover:bg-coral-light text-white rounded-full shadow-lg shadow-coral/30 flex items-center justify-center text-2xl font-bold active:scale-90 transition-transform"
+              className="w-14 h-14 bg-gradient-to-br from-coral to-[#f7a072] hover:from-coral-light hover:to-[#f9b088] text-white rounded-full shadow-lg shadow-coral/30 flex items-center justify-center text-2xl font-bold active:scale-90 transition-transform"
               aria-label="Quick add expense"
             >
               +

@@ -30,13 +30,14 @@
 **ContextMoney** is a **privacy-first, offline-first Progressive Web App (PWA)** for personal expense tracking. It is designed around the concept of **"contexts"** — separate financial profiles for different life phases (college, first job, new city, abroad). All data lives exclusively on the user's device with zero backend dependency.
 
 ### Core Philosophy
-| Principle | Implementation |
-|-----------|----------------|
-| **Privacy First** | 100% local data (IndexedDB), no account required |
-| **Offline First** | Service Worker + IndexedDB works without internet |
-| **Mobile First** | PWA installable, bottom nav, touch gestures |
-| **India First** | INR default, Indian brand keywords (Swiggy, Zomato, Ola) |
-| **Zero Friction** | Natural language input, smart auto-categorization |
+
+| Principle         | Implementation                                           |
+| ----------------- | -------------------------------------------------------- |
+| **Privacy First** | 100% local data (IndexedDB), no account required         |
+| **Offline First** | Service Worker + IndexedDB works without internet        |
+| **Mobile First**  | PWA installable, bottom nav, touch gestures              |
+| **India First**   | INR default, Indian brand keywords (Swiggy, Zomato, Ola) |
+| **Zero Friction** | Natural language input, smart auto-categorization        |
 
 ---
 
@@ -132,51 +133,51 @@
 
 ### Core Framework
 
-| Layer | Technology | Version | Purpose |
-|-------|-----------|---------|---------|
-| UI Framework | React | 19.2.5 | Component-based UI rendering |
-| Build Tool | Vite | 8.0.10 | Fast bundling, HMR dev server |
-| Styling | Tailwind CSS | 4.2.4 | Utility-first CSS (via Vite plugin) |
-| Animations | Motion (Framer) | 12.38.0 | Page transitions, micro-animations |
+| Layer        | Technology      | Version | Purpose                             |
+| ------------ | --------------- | ------- | ----------------------------------- |
+| UI Framework | React           | 19.2.5  | Component-based UI rendering        |
+| Build Tool   | Vite            | 8.0.10  | Fast bundling, HMR dev server       |
+| Styling      | Tailwind CSS    | 4.2.4   | Utility-first CSS (via Vite plugin) |
+| Animations   | Motion (Framer) | 12.38.0 | Page transitions, micro-animations  |
 
 ### State & Data
 
-| Layer | Technology | Version | Purpose |
-|-------|-----------|---------|---------|
-| Global State | Zustand | 5.0.12 | Lightweight state with persistence |
-| Database | Dexie | 4.4.2 | IndexedDB ORM with migrations |
-| Reactive Queries | Dexie React Hooks | 4.4.0 | Live re-renders on DB changes |
-| Compression | lz-string | 1.5.0 | Compress export/sync payloads |
+| Layer            | Technology        | Version | Purpose                            |
+| ---------------- | ----------------- | ------- | ---------------------------------- |
+| Global State     | Zustand           | 5.0.12  | Lightweight state with persistence |
+| Database         | Dexie             | 4.4.2   | IndexedDB ORM with migrations      |
+| Reactive Queries | Dexie React Hooks | 4.4.0   | Live re-renders on DB changes      |
+| Compression      | lz-string         | 1.5.0   | Compress export/sync payloads      |
 
 ### Routing & Navigation
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| React Router DOM | 7.14.2 | Client-side routing with lazy loading |
+| Technology       | Version | Purpose                               |
+| ---------------- | ------- | ------------------------------------- |
+| React Router DOM | 7.14.2  | Client-side routing with lazy loading |
 
 ### Visualization
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| Recharts | 3.8.1 | Bar, Line, Pie, Composed charts |
+| Technology       | Version | Purpose                           |
+| ---------------- | ------- | --------------------------------- |
+| Recharts         | 3.8.1   | Bar, Line, Pie, Composed charts   |
 | TanStack Virtual | 3.13.24 | Virtual scrolling for large lists |
 
 ### PWA & Performance
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| vite-plugin-pwa | 1.2.0 | Service worker, manifest |
-| vite-plugin-compression | 0.5.1 | Gzip + Brotli output compression |
-| date-fns | 4.1.0 | Date manipulation utilities |
+| Technology              | Version | Purpose                          |
+| ----------------------- | ------- | -------------------------------- |
+| vite-plugin-pwa         | 1.2.0   | Service worker, manifest         |
+| vite-plugin-compression | 0.5.1   | Gzip + Brotli output compression |
+| date-fns                | 4.1.0   | Date manipulation utilities      |
 
 ### Testing
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| Vitest | 4.1.5 | Unit & component testing |
-| Testing Library React | 16.3.2 | Component testing utilities |
-| Playwright | 1.59.1 | End-to-end browser testing |
-| Happy-dom / jsdom | 20.9 / 29.1 | DOM simulation for tests |
+| Technology            | Version     | Purpose                     |
+| --------------------- | ----------- | --------------------------- |
+| Vitest                | 4.1.5       | Unit & component testing    |
+| Testing Library React | 16.3.2      | Component testing utilities |
+| Playwright            | 1.59.1      | End-to-end browser testing  |
+| Happy-dom / jsdom     | 20.9 / 29.1 | DOM simulation for tests    |
 
 ---
 
@@ -296,6 +297,7 @@ UI Update (Dashboard totals, Expense list, Charts)
 ```
 
 ### Why This Approach?
+
 - **No server** → no Redux Thunk / React Query / SWR needed
 - **Zustand** is 1kb and handles synchronous settings perfectly
 - **Dexie live queries** replace async data fetching entirely — writes propagate automatically to all consumers
@@ -336,21 +338,21 @@ App.jsx
 
 ### Reusable Components
 
-| Component | Purpose |
-|-----------|---------|
-| `AnimatedNumber` | Count-up animation for financial figures |
-| `BottomNav` | Mobile navigation with FAB (quick-add button) |
-| `CategoryPicker` | Dropdown with icon + color category selection |
-| `ErrorBoundary` | React error boundary for graceful crash handling |
-| `Header` | Page title + context switcher |
-| `InstallBanner` | PWA installation prompt banner |
-| `PageTransition` | Animated route transition wrapper |
-| `QuickAdd` | Natural language expense input with suggestions |
-| `Skeleton` | Loading placeholder UI |
-| `SwipeableRow` | Touch-swipe to delete expense row |
-| `TagInput` | Multi-tag input with add/remove |
-| `Toast` | Stackable notification system |
-| `VirtualList` | Virtualized scrollable list (TanStack Virtual) |
+| Component        | Purpose                                          |
+| ---------------- | ------------------------------------------------ |
+| `AnimatedNumber` | Count-up animation for financial figures         |
+| `BottomNav`      | Mobile navigation with FAB (quick-add button)    |
+| `CategoryPicker` | Dropdown with icon + color category selection    |
+| `ErrorBoundary`  | React error boundary for graceful crash handling |
+| `Header`         | Page title + context switcher                    |
+| `InstallBanner`  | PWA installation prompt banner                   |
+| `PageTransition` | Animated route transition wrapper                |
+| `QuickAdd`       | Natural language expense input with suggestions  |
+| `Skeleton`       | Loading placeholder UI                           |
+| `SwipeableRow`   | Touch-swipe to delete expense row                |
+| `TagInput`       | Multi-tag input with add/remove                  |
+| `Toast`          | Stackable notification system                    |
+| `VirtualList`    | Virtualized scrollable list (TanStack Virtual)   |
 
 ---
 
@@ -443,16 +445,16 @@ Device A                           Device B
 
 ## 12. Performance Architecture
 
-| Optimization | Mechanism | Impact |
-|-------------|-----------|--------|
-| **Code Splitting** | `React.lazy()` per page | Smaller initial bundle |
-| **Gzip + Brotli** | vite-plugin-compression | 60–80% smaller transfer size |
-| **Virtual Scrolling** | TanStack React Virtual | Smooth scroll through 1000+ expenses |
-| **Debounced Search** | `useDebounce(300ms)` | No re-query on every keypress |
-| **Live Queries** | Dexie `useLiveQuery` | No polling, zero wasted renders |
-| **Skeleton UI** | `Skeleton` component | Perceived performance improvement |
-| **Lazy Images** | Intersection Observer | Images load only when in viewport |
-| **Memoized Charts** | `useMemo` on chart data | No recompute on unrelated state changes |
+| Optimization          | Mechanism               | Impact                                  |
+| --------------------- | ----------------------- | --------------------------------------- |
+| **Code Splitting**    | `React.lazy()` per page | Smaller initial bundle                  |
+| **Gzip + Brotli**     | vite-plugin-compression | 60–80% smaller transfer size            |
+| **Virtual Scrolling** | TanStack React Virtual  | Smooth scroll through 1000+ expenses    |
+| **Debounced Search**  | `useDebounce(300ms)`    | No re-query on every keypress           |
+| **Live Queries**      | Dexie `useLiveQuery`    | No polling, zero wasted renders         |
+| **Skeleton UI**       | `Skeleton` component    | Perceived performance improvement       |
+| **Lazy Images**       | Intersection Observer   | Images load only when in viewport       |
+| **Memoized Charts**   | `useMemo` on chart data | No recompute on unrelated state changes |
 
 ---
 
@@ -492,6 +494,7 @@ Test Commands:
 ### Key Features
 
 #### 💰 Core Expense Management
+
 - Add expenses via natural language ("500 chai yesterday") or form
 - Auto-categorization from 100+ keywords (Swiggy→Food, Uber→Transport)
 - Bulk delete with multi-select; swipe-to-delete on mobile
@@ -499,28 +502,33 @@ Test Commands:
 - Tagging support on all expenses
 
 #### 📊 Analytics & Insights
+
 - Daily trend bars, category pie charts, monthly stacked bars, year overview
 - Smart nudges: category alerts, weekend spending patterns, budget warnings
 - Financial Health Score based on savings rate + spending distribution
 - Month-over-month change tracking (+/-% indicators)
 
 #### 🔄 Multi-Context Profiles
+
 - Separate financial profiles per life phase (college, job, city, abroad)
 - Side-by-side comparison with currency conversion (INR, USD, AED, EUR, GBP, SGD)
 - Independent income, budget, and category settings per context
 
 #### 🔮 Smart Tools
+
 - What-If Simulator with interactive sliders for savings scenario modelling
 - Recurring Pattern Detection from expense history
 - Subscription/recurring bill manager with due-date tracking
 
 #### 🔒 Privacy & Data Control
+
 - Zero sign-up, zero server, zero tracking
 - All data stays on your device (IndexedDB)
 - Export to JSON, import from JSON with merge resolution
 - Optional GitHub Gist sync for cross-device use
 
 #### 📱 PWA & Mobile Experience
+
 - Install to home screen (Android, iOS, Desktop)
 - 100% offline functionality
 - Swipe gestures, bottom navigation, floating action button
@@ -528,16 +536,16 @@ Test Commands:
 
 ### Competitive Advantages
 
-| Advantage | Description |
-|-----------|-------------|
-| **Zero Backend** | No servers to maintain, no accounts to manage, no data breaches |
-| **Offline First** | Works on flight mode, slow connections, or no internet |
-| **India Optimized** | INR default, Indian apps/brands in keyword map |
-| **Natural Language Input** | Fastest expense logging — just type naturally |
-| **Multi-Context Design** | Unique concept: track finances across life chapters |
-| **Instant Performance** | Lazy loading, virtual scrolling, compressed assets |
-| **Fully Testable** | Unit + E2E tests ensure reliability |
-| **Open Source Ready** | Standard Vite/React stack, easy to contribute |
+| Advantage                  | Description                                                     |
+| -------------------------- | --------------------------------------------------------------- |
+| **Zero Backend**           | No servers to maintain, no accounts to manage, no data breaches |
+| **Offline First**          | Works on flight mode, slow connections, or no internet          |
+| **India Optimized**        | INR default, Indian apps/brands in keyword map                  |
+| **Natural Language Input** | Fastest expense logging — just type naturally                   |
+| **Multi-Context Design**   | Unique concept: track finances across life chapters             |
+| **Instant Performance**    | Lazy loading, virtual scrolling, compressed assets              |
+| **Fully Testable**         | Unit + E2E tests ensure reliability                             |
+| **Open Source Ready**      | Standard Vite/React stack, easy to contribute                   |
 
 ---
 
@@ -604,4 +612,4 @@ No backend, no database server, no Docker, no DevOps.
 
 ---
 
-*Generated for ContextMoney — Privacy-First Expense Tracker*
+_Generated for ContextMoney — Privacy-First Expense Tracker_
